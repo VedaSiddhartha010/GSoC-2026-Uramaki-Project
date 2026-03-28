@@ -17,7 +17,7 @@ transcription:
   default_model: "whisper"  # Specify the default transcription model (e.g., whisper, another_model)
   whisper:                 # Whisper-specific configuration
     model_size: "base"  # Choose between tiny, base, small, medium, large
-    device: 'cpu'               # `cpu` for CPU, or `cuda` GPU device
+    device: -1              # -1 For CPU or "0" for GPU
     # device: 'cuda'               # `cpu` for CPU, or `cuda` GPU device
     chunk_length_s: 30 
   # another_model:           # Placeholder for another transcription model's configuration
@@ -29,7 +29,7 @@ sentiment_analysis:
   default_model: "bertweet"  # Specify the default sentiment analysis model (e.g., bertweet, another_model)
   bertweet:                  # Vader-specific configuration
     model_name: "vinai/bertweet-base"
-    device: "cpu"  # or "cpu"
+    device: -1  # -1 For CPU or "0" for GPU
     # device: 'cuda'               # `cpu` for CPU, or `cuda` GPU device
   # another_model:          # Placeholder for another sentiment analysis model's configuration
   #   api_key: "your_api_key"
@@ -37,7 +37,7 @@ sentiment_analysis:
 speech_emotion:
   default:
     model_name: "superb/wav2vec2-base-superb-er"
-    device: -1
+    device: -1 ## -1 For CPU or "0" for GPU
 
 # AudioTranscriptionSentimentPipeline Configuration
 audio_transcription_sentiment_pipeline:
