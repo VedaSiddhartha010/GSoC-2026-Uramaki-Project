@@ -3,7 +3,7 @@ Voice Analysis Service
 Provides speech feature extraction, emotion detection,
 and cognitive load estimation aligned with RUXAILAB pipeline.
 
-PROFESSIONAL PATTERNS USED:
+ PATTERNS USED:
 - Type hints on all parameters and return values
 - Instance variables with type annotations
 - Comprehensive docstrings explaining every method
