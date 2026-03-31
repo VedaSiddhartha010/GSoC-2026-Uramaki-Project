@@ -22,10 +22,10 @@ from app.utils.logger import logger
 class VoiceAnalysisService:
     """Service layer for voice/speech analysis operations.
     
-    This class handles:
-    1. Speech feature extraction (energy, zero-crossing rate, silence detection)
-    2. Emotion detection based on voice characteristics
-    3. Cognitive load estimation from speech patterns
+    This class handles :---
+    1. Speech feature extraction (energy, zero-crossing rate, silence detection).
+    2. Emotion detection based on voice characteristics.
+    3. Cognitive load estimation from speech patterns.
     
     All methods are type-hinted for better IDE support and type safety.
     """
@@ -66,7 +66,7 @@ class VoiceAnalysisService:
             - 'cognitive_state': Dict with cognitive load estimation
             - 'error': Error message if analysis fails
             
-        Process:
+        process :--
         1. Load audio file as AudioSegment
         2. Extract speech features (energy, silence, etc.)
         3. Detect emotion based on features
@@ -157,7 +157,7 @@ class VoiceAnalysisService:
             audio (AudioSegment): Audio segment to analyze
             
         Returns:
-            Dict with features:
+            Dict with features :--
             - 'duration_sec': Total audio duration in seconds (float)
             - 'energy': RMS energy level (float)
             - 'zcr': Zero-crossing rate indicating pitch/frequency changes (float)
@@ -165,7 +165,7 @@ class VoiceAnalysisService:
             - 'speaking_ratio': Proportion of speech sections (0-1, float)
             - 'dynamic_range': Difference between loudest and quietest (float)
             
-        TECHNICAL DETAILS:
+        TECHNICAL DETAILS :--
         - Energy: RMS (root mean square) of audio samples, high = loud speech
         - ZCR: Frequency of sign changes in waveform, high = consonants
         - Silence detection: Uses audio.dBFS - 14 as threshold (converted to int)
@@ -257,7 +257,7 @@ class VoiceAnalysisService:
               * 'confidence': High energy + low silence (loud, continuous)
               * 'neutral': Default/other patterns
               
-        EMOTION LOGIC:
+        EMOTION LOGIC :----
         Frustration: Speaker is aggressive or angry (loud, frequent consonants)
         Hesitation: Speaker is uncertain (lots of pauses and silence)
         Confidence: Speaker is assertive (loud voice, few pauses)
@@ -306,7 +306,7 @@ class VoiceAnalysisService:
             - 'speech_variability': Float value (dynamic_range) indicating
               how much the speaker varies volume/intensity
               
-        COGNITIVE THEORY:
+        COGNITIVE THEORY :---
         High cognitive load causes hesitations and pauses; speaker
         must think longer before responding. Measured by silence ratio.
         Speech variability (dynamic_range) also indicates effort.
