@@ -1,0 +1,31 @@
+{
+  "transcription": "And there's a voice and it's a little quiet voice that goes jump. It's the same voice.",
+  "chunks": [
+    {
+      "timestamp": [0.0, 3.0],
+      "text": "And there's a voice and it's a little quiet voice that goes jump."
+    },
+    {
+      "timestamp": [3.0, 5.0],
+      "text": "It's the same voice."
+    }
+  ],
+  "speech_features": {
+    "duration_sec": 5.0,
+    "energy": 0.0088,
+    "zcr": 0.0658,
+    "silence_ratio": 0.3608,
+    "speaking_ratio": 0.6392,
+    "dynamic_range": 20.82,
+    "stress_score": 0.306,
+    "stress_level": "medium"
+  },
+  "emotion": {
+    "label": "neutral",
+    "score": 0.4597
+  },
+  "cognitive_state": {
+    "cognitive_load": "medium",
+    "speech_variability": 20.82
+  }
+}
